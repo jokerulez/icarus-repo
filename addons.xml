@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.video.icarus" name="Icarus" version="1.0.0" provider-name="Icarus Crew">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.libtorrent" optional="true"/>
+    <import addon="script.module.web-pdb" optional="true" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+      <screenshot>resources/media/themes/ss/1.jpg</screenshot>
+      <screenshot>resources/media/themes/ss/2.jpg</screenshot>
+      <screenshot>resources/media/themes/ss/3.jpg</screenshot>
+      <screenshot>resources/media/themes/ss/4.jpg</screenshot>
+    </assets>
+    <platform>all</platform>
+    <summary lang="it">Icarus is a Kodi add-on to search and watch contents on the web.</summary>
+    <summary lang="en">Icarus is a Kodi add-on to search and watch contents on the web.</summary>
+    <description lang="it">Icarus add-on media web content made easy.[CR][CR]Icarus doesn't host or distribute any of the contents displayed by the add-on and doesn't have any affiliation with the providers of such contents.</description>
+    <description lang="en">Icarus add-on media web content made easy.[CR][CR]Icarus doesn't host or distribute any of the contents displayed by the add-on and doesn't have any affiliation with the providers of such contents.</description>
+    <disclaimer lang="it">Icarus Crew non ospita o distribuisce nessuno dei contenuti visualizzati dall'add-on e non ha alcuna affiliazione con i fornitori dei contenuti stessi.</disclaimer>
+    <disclaimer lang="en">Icarus Crew doesn't host or distribute any of the contents displayed by the add-on and doesn't have any affiliation with the providers of such contents.</disclaimer>
+    <license>GNU GPL v3</license>
+  </extension>
+  <extension point="xbmc.service" library="videolibrary_service.py" start="login|startup">
+  </extension>
+</addon>
+
+<addon id="repository.icarus" name="[COLOR red]ICARUS[/COLOR] Repo" version="1.0.0" provider-name="ICARUS Repo Addon">
+    <extension point="xbmc.addon.repository" name="ICARUS Repo">
+        <info>https://github.com/icarus-addon/icarus-repo/raw/master/addons.xml</info>
+        <checksum>https://github.com/icarus-addon/icarus-repo/raw/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://github.com/icarus-addon/icarus-repo/raw/master</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repository ICARUS</summary>
+        <description></description>
+        <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+        <platform>all</platform>
+    </extension>
+</addon>
+</addons>
